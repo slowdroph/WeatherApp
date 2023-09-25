@@ -16,7 +16,7 @@ const Weather = async function (city) {
         temp.innerHTML = Number.parseInt(WeatherData.current.temp_c) + " °";
         cidade.innerHTML = WeatherData.location.name;
         
-        humidity.innerHTML = WeatherData.current.humidity
+        humidity.innerHTML = WeatherData.current.humidity + " %"
         wind.innerHTML = Number.parseInt(WeatherData.current.wind_kph) + " km/h"
 
 
