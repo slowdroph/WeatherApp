@@ -9,31 +9,27 @@ const Weather = async function (city) {
         console.log(WeatherData);
         const temp = document.querySelectorAll(".data span")[0];
         const cidade = document.querySelectorAll(".data span")[1];
-        const wind = document.querySelectorAll(".font")[2]
-        const humidity = document.querySelectorAll(".font")[0]
-        
+        const wind = document.querySelectorAll(".font")[2];
+        const humidity = document.querySelectorAll(".font")[0];
 
         temp.innerHTML = Number.parseInt(WeatherData.current.temp_c) + " °";
         cidade.innerHTML = WeatherData.location.name;
-        
-        humidity.innerHTML = WeatherData.current.humidity + " %"
-        wind.innerHTML = Number.parseInt(WeatherData.current.wind_kph) + " km/h"
 
+        humidity.innerHTML = WeatherData.current.humidity + " %";
+        wind.innerHTML =
+            Number.parseInt(WeatherData.current.wind_kph) + " km/h";
 
         const imagem = document.querySelector(".image");
 
         if (WeatherData.current.condition.text === "Clear") {
             imagem.src = "imagens/night.png";
         } else if (WeatherData.current.condition.text === "Sunny") {
-            imagem.src = "imagens/sun.png"
+            imagem.src = "imagens/sun.png";
         } else if (WeatherData.current.condition.code === 1003) {
-            imagem.src = "imagens/cloudly.png"
+            imagem.src = "imagens/cloudly.png";
         } else if (WeatherData.current.condition.code === 1006 || 1009) {
-            imagem.src = "imagens/overcast.png"
+            imagem.src = "imagens/overcast.png";
         }
-
-
-
     } catch (error) {
         console.error(error);
     }
