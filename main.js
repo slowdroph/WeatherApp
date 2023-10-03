@@ -32,12 +32,23 @@ const Weather = async function (city) {
         }
     } catch (error) {
         console.error(error);
-    }
+    } 
 };
 
 const form = document.querySelector("#texto");
 const botão = document.querySelector(".button");
+const InfoModal = document.querySelector(".hidden-container");
 
 botão.addEventListener("click", function () {
+    if (form.value === "") {
+        InfoModal.style.display = 'none'
+    } else {
+        InfoModal.style.display = 'flex'
+    }
     Weather(form.value);
+    if (InfoModal.classList.contains("show")) {
+        InfoModal.classList.remove("show");
+    } else {
+        form.classList.add("hidden");
+    }
 });

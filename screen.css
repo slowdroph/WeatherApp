@@ -62,6 +62,9 @@
     main {
         padding: 40px 0px 40px 0px;
     }
+    .search-container {
+        padding-bottom: 0px;
+    }
 }
 
 @media screen and (max-height:600px) {
@@ -77,12 +80,7 @@
 }
 
 @media screen and (max-height:400px) {
-    main {
+    main, .hidden-container {
         gap: 30px;
     }
 }
-
-
-
-
-

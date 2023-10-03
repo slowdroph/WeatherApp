@@ -34,6 +34,25 @@ main {
     display: flex;
     flex-direction: row;
     position: relative;
+    padding-bottom: 40px;
+}
+
+.hidden-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 60px;
+    transition-delay: 2s;
+    transition-duration: 4s;
+
+    height: 100%;
+}
+
+.show {
+    display: none !important;
+    
 }
 
 .button {
