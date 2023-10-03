@@ -33,6 +33,9 @@ const Weather = async function (city) {
     } catch (error) {
         console.error(error);
     } 
+    
+    document.querySelector(".lds-ring").style.visibility = 'hidden'
+    document.querySelector(".hidden-container").style.visibility = 'visible'
 };
 
 const form = document.querySelector("#texto");
