@@ -37,6 +37,15 @@ main {
     padding-bottom: 40px;
 }
 
+.erro {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    text-align: center;
+    color: red;
+    display: none;
+}
+
 .hidden-container {
     display: flex;
     flex-direction: column;
@@ -44,7 +53,7 @@ main {
     align-items: center;
     width: 100%;
     gap: 60px;
-    transition-delay: 2s;
+    transition-delay: 1s;
     transition-duration: 4s;
     height: 100%;
     visibility: hidden;
