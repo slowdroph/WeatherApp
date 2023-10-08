@@ -53,11 +53,19 @@ const form = document.querySelector("#texto");
 const botão = document.querySelector(".button");
 const InfoModal = document.querySelector(".hidden-container");
 
-botão.addEventListener("click", function () {
+botão.addEventListener("click", Value);
+form.addEventListener("keydown", function(e){
+    if(e.code === "Enter"){
+        Value()
+        console.log('worked')
+    }
+})
+
+function Value (){
     Weather(form.value);
     if (InfoModal.classList.contains("show")) {
         InfoModal.classList.remove("show");
     } else {
         form.classList.add("hidden");
     }
-});
+}
