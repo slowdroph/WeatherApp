@@ -15,6 +15,12 @@
         width: 320px;
         border-radius: 6px;
     }
+
+    .erro {
+        text-wrap: nowrap;
+        left: -10px;
+        right: 0px;
+    }
     .effect {
         border-bottom-left-radius:6px ;
         border-bottom-right-radius:6px ;
@@ -60,10 +66,10 @@
         display: none;
     }
     main {
-        padding: 40px 0px 40px 0px;
+        padding: 40px 0px 0px 0px;
     }
     .search-container {
-        padding-bottom: 0px;
+        padding-bottom: 40px;
     }
 }
 
