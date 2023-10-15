@@ -65,27 +65,24 @@
     .effect {
         display: none;
     }
+    .search-container {
+        padding-bottom: 40px;
+    }
     main {
         gap: 0px;
         padding: 30px 0px 30px 0px;
+        top: 50%;
+    }
+}
+
+@media screen and (max-height:550px) {
+    .image {
+        display: none;
     }
 }
 
 @media (orientation: landscape) {
-    .effect {
-        display: none;
-    }
-    main {
-        padding: 40px 0px 40px 0px;
-        top: 50%;
-    }
-    .search-container {
-        padding-bottom: 40px;
-    }
     main, .hidden-container {
         gap: 30px;
-    }
-    .image {
-        display: none;
     }
 }
