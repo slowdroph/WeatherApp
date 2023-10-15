@@ -13,6 +13,8 @@ const Weather = async function (city) {
         const wind = document.querySelectorAll(".font")[2];
         const humidity = document.querySelectorAll(".font")[0];
         const ErrorMessage = document.querySelector(".erro");
+        const corpo = document.querySelector("body");
+        const imagem = document.querySelector(".image");
 
         if (request.status === 400) {
             ErrorMessage.innerHTML = `Error: ${WeatherData?.error.message} ❌`;
@@ -23,14 +25,14 @@ const Weather = async function (city) {
             ErrorMessage.innerHTML = "";
         }
 
+        corpo.style.backgroundImage = `url(nation/${(WeatherData.location.country).split(" ").join("")}.jpg)`;
+
         temp.innerHTML = Number.parseInt(WeatherData.current.temp_c) + " °";
         cidade.innerHTML = WeatherData.location.name;
 
         humidity.innerHTML = WeatherData.current.humidity + " %";
         wind.innerHTML =
             Number.parseInt(WeatherData.current.wind_kph) + " km/h";
-
-        const imagem = document.querySelector(".image");
 
         if (WeatherData.current.condition.text === "Clear") {
             imagem.src = "imagens/night.png";
@@ -54,14 +56,13 @@ const botão = document.querySelector(".button");
 const InfoModal = document.querySelector(".hidden-container");
 
 botão.addEventListener("click", Value);
-form.addEventListener("keydown", function(e){
-    if(e.code === "Enter"){
-        Value()
-        console.log('worked')
+form.addEventListener("keydown", function (e) {
+    if (e.code === "Enter") {
+        Value();
     }
-})
+});
 
-function Value (){
+function Value() {
     Weather(form.value);
     if (InfoModal.classList.contains("show")) {
         InfoModal.classList.remove("show");
