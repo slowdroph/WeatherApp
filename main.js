@@ -3,7 +3,7 @@
 const Weather = async function (city) {
     try {
         const request = await fetch(
-            `https:api.weatherapi.com/v1/current.json?key=0a9869fd42b14a2ba93235136232009&q=${city}&aqi=no`
+            `http:api.weatherapi.com/v1/current.json?key=0a9869fd42b14a2ba93235136232009&q=${city}&aqi=no`
         );
         const WeatherData = await request.json();
 
@@ -25,7 +25,7 @@ const Weather = async function (city) {
             errorMessage.style.display = "block";
             document.querySelector(".hidden-container").classList.add("show");
             infoContainer.classList.add("show");
-            throw new Error(`${weatherData.error?.message}`);
+            throw new Error(`${WeatherData.error?.message}`);
         } else if (request.status === 200) {
             errorMessage.innerHTML = "";
             infoContainer.classList.remove("show");
