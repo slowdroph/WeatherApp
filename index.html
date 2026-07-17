@@ -1,42 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="screen.css">
-        <title>WeatherApp</title>
-    </head>
-    <body>
-        <div class="local-info-container"></div>
-            <main>
-                <div class="search-container">
-                    <button class="button"><img src="imagens/search-len.svg" alt="search len"></button>
-                    <input spellcheck="false" type="text" placeholder="     enter city name" id="texto" />
-                    <p class="erro">Error: </p>
-                </div>
-                <div class="hidden-container show">
-                    <img class="image" src="imagens/sun.png" alt="sun" />
-                    <div class="data">
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="info-container">
-                        <div class="info-box">
-                            <img src="imagens/humidity.png" alt="">
-                            <p class="font"></p>
-                            <p class="font">Humidity</p>
-                        </div>
-                        <div class="info-box">
-                            <img src="imagens/wind.png" alt="">
-                            <p class="font"></p>
-                            <p class="font">wind speed</p>
-                        </div>
-                    </div>
-                    
-                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-                </div>
-            </main>
-        <script src="main.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
